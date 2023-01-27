@@ -1,0 +1,28 @@
+{
+  "name": "vite-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@fontsource/lato": "^4.5.10",
+    "@primer/react": "^35.25.1",
+    "@razorpay/blade": "https://pkg.csb.dev/razorpay/blade/commit/57c3e447/@razorpay/blade",
+    "@vitejs/plugin-react": "2.0.1",
+    "babel-plugin-styled-components": "^2.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.10"
+  },
+  "scripts": {
+    "start": "abell dev",
+    "generate": "abell generate"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^18.0.27",
+    "abell": "^1.0.0-alpha.83"
+  },
+  "keywords": [],
+  "description": ""
+}

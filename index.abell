@@ -1,0 +1,19 @@
+{{
+  import React from "react";
+  import ReactDOMServer from "react-dom/server";
+  import { ServerStyleSheet } from "styled-components";
+  import App from './App';
+  
+  const sheet = new ServerStyleSheet();
+  const htmlContent = ReactDOMServer.renderToString(sheet.collectStyles(<App />));
+  const styleTags = sheet.getStyleTags(); // or sheet.getStyleElement();
+}}
+<html>
+  <head>
+  {{ styleTags }}
+  </head>
+  <body>
+    <div id="root">{{ htmlContent }}</div>
+    <script src="/index.tsx" type="module"></script>
+  </body>
+</html>
