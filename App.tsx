@@ -1,4 +1,5 @@
 import React from "react";
+import styled from 'styled-components';
 import {
   BladeProvider,
   Button,
@@ -10,19 +11,32 @@ import {
   ActionListItem,
   Heading,
   Box,
-  Title,
+  Display,
 } from "@razorpay/blade/components";
-import { paymentTheme } from "@razorpay/blade/tokens";
+import { bladeTheme } from "@razorpay/blade/tokens";
+
+const StyledBox = styled.div`
+  background-color: tomato;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+`
 
 const App = () => {
   const [count, setCount] = React.useState(0);
 
   return (
-    <BladeProvider themeTokens={paymentTheme} colorScheme="light">
+    <BladeProvider themeTokens={bladeTheme} colorScheme="light">
       <Box paddingX="spacing.4" paddingY="spacing.5">
-        <Title size="large" marginBottom="spacing.8" marginTop="spacing.5">
+        <Display size="large" marginBottom="spacing.8" marginTop="spacing.5">
           Abell 🤝 React 🤝 Styled Components 🤝 Blade
-        </Title>
+        </Display>
         <Box>
           <Heading size="large" marginBottom="spacing.5">
             Counter Example
@@ -48,6 +62,12 @@ const App = () => {
               </ActionList>
             </DropdownOverlay>
           </Dropdown>
+        </Box>
+
+        <Box>
+          <StyledBox>
+            <Text size="large" weight="semibold" display="inline-block" textAlign="center" color="surface.text.staticWhite.normal">Custom Styled Component</Text>
+          </StyledBox>
         </Box>
       </Box>
     </BladeProvider>
